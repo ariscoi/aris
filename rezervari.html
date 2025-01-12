@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <title>Rezervări - Ecotour</title>
+    <link rel="stylesheet" href="rezervari.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Logo.webp" alt="Ecotour Logo" class="logo">
+        </div>
+        <h1><a href="acasa.html">Ecotour</a></h1>
+
+        <nav>
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Meniu</a>
+                <div class="dropdown-menu">
+                    <a href="acasa.html">Acasă</a>
+                    <a href="oferte.html">Oferte</a>
+                    <a href="aboutus.html">Despre Noi</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            
+            <button type="submit">Login</button>
+            <p id="loginMessage"></p>
+        </form>
+
+        <button id="logoutButton" style="display: none;">Logout</button>
+        
+        <form id="rezervariForm">
+            <label for="name">Nume:</label>
+            <input type="text" id="name" name="name" placeholder="Introduceți numele dvs." required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Introduceți email-ul dvs." required>
+            
+            <label for="phone">Telefon:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Introduceți numărul de telefon" required>
+            
+            <label for="destination">Destinație:</label>
+            <select id="destination" name="destination" required>
+                <option value="tanzania">Tanzania</option>
+                <option value="norway">Norvegia</option>
+                <option value="everest">Everest</option>
+            </select>
+
+            <label for="numar_persoane">Număr de persoane:</label>
+            <input type="range" id="numar_persoane" min="1" max="10" value="1">
+            <span id="valoare_persoane">1</span> Persoane
+            
+            <label for="numar_nopti">Număr de nopți:</label>
+            <input type="range" id="numar_nopti" min="1" max="14" value="1">
+            <span id="valoare_nopti">1</span> Nopți
+            
+            <label for="calendar">Selectați noaptea de plecare:</label>
+            <input type="date" id="calendar" name="calendar" required>
+
+            <button type="submit" class="button">Trimite Rezervarea</button>
+        </form>
+    </main>
+
+    <div class="popup" id="popup">Formular trimis cu succes, vă vom contacta în scurt timp</div>
+
+    <footer>
+        <p>&copy; 2024 Ecotour. Toate drepturile rezervate.</p>
+        <p>
+            Contact: <a href="mailto:info@ecotour.com">info@ecotour.com</a> | 
+            Telefon: <a href="tel:+40123456789">+40 123 456 789</a>
+        </p>
+    </footer>
+
+    <script src="rezervari.js"></script>
+</body>
+</html>
